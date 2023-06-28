@@ -1,9 +1,10 @@
 $(document).ready(function(){
 
-    var menuFlotante = document.createElement("div");
-    menuFlotante.className = 'float_buttons';
-    menuFlotante.style = 'position: fixed; top: 70px; display: flex !important; flex-direction: column; align-items: flex-end; right: 20px; overflow: hidden; z-index: 99;';
-    menuFlotante.innerHTML = `
+    /** Menu Flotante **/
+var menuFlotante = document.createElement("div");
+menuFlotante.className = 'float_buttons';
+menuFlotante.style = 'position: fixed; top: 70px; display: flex !important; flex-direction: column; align-items: flex-end; right: 20px; overflow: hidden; z-index: 99;';
+menuFlotante.innerHTML = `
     <style type="text/css" id="fbuttons">
     .float_buttons .fbutton {
         transition: width 0.4s 0.1s;
@@ -134,7 +135,7 @@ $(document).ready(function(){
         </svg>
     </span>
     </a>
-    <a class="fbutton m-dM-none--1" onClick="function addBF(btnItem,event){if(btnItem.href===''){event.preventDefault();}else{location.href='https://www.audi.com.mx/mx/web/es/experiencia/promocAudi.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones'}btnItem.classList.add('active');btnItem.setAttribute('href','https://www.audi.com.mx/mx/web/es/experiencia/promocAudi.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones');return false;} addBF(this,event);return false;">
+    <a class="fbutton m-dM-none--1" onClick="function addBF(btnItem,event){if(btnItem.href===''){event.preventDefault();}else{location.href='https://www.audi.com.mx/mx/web/es/experiencia/audi-promociones.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones'}btnItem.classList.add('active');btnItem.setAttribute('href','https://www.audi.com.mx/mx/web/es/experiencia/audi-promociones.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones');return false;} addBF(this,event);return false;">
     <span class="fbutton--svg">
         <svg viewBox="0 0 48 48">
         <path d="M12.5,18.5 L28.5,34.5 L12.5,18.5 Z M18.5,12.5 L34.5,28.5 L18.5,12.5 Z M26.5,45.5 L45.5,26.5 L21.5,2.5 L2.5,2.5 L2.5,21.5 L26.5,45.5 Z M9,11.5 C10.3807119,11.5 11.5,10.3807119 11.5,9 C11.5,7.61928813 10.3807119,6.5 9,6.5 C7.61928813,6.5 6.5,7.61928813 6.5,9 C6.5,10.3807119 7.61928813,11.5 9,11.5 Z" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd"/>
@@ -167,7 +168,7 @@ $(document).ready(function(){
         </svg>
     </span>
     </a>
-    <a class="fbutton m-d-none" href="https://www.audi.com.mx/mx/web/es/experiencia/promocAudi.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones">
+    <a class="fbutton m-d-none" href="https://www.audi.com.mx/mx/web/es/experiencia/audi-promociones.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones">
     <span class="fbutton--svg">
         <svg viewBox="0 0 48 48">
         <path d="M12.5,18.5 L28.5,34.5 L12.5,18.5 Z M18.5,12.5 L34.5,28.5 L18.5,12.5 Z M26.5,45.5 L45.5,26.5 L21.5,2.5 L2.5,2.5 L2.5,21.5 L26.5,45.5 Z M9,11.5 C10.3807119,11.5 11.5,10.3807119 11.5,9 C11.5,7.61928813 10.3807119,6.5 9,6.5 C7.61928813,6.5 6.5,7.61928813 6.5,9 C6.5,10.3807119 7.61928813,11.5 9,11.5 Z" stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd"/>
