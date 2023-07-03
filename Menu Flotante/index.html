@@ -58,6 +58,7 @@
             margin-bottom: 15px !important;
             display: flex;
             align-items: center;
+            justify-content: center;
             color: white !important;
             text-decoration: none !important;
           }
@@ -135,17 +136,12 @@
             position: absolute;
             left: 48px;
           }
-          .float_buttons .fbutton .fbutton--svg,
-          .fbutton .fbutton--svg {
+          .float_buttons .fbutton .fbutton--svg {
             display: block;
             max-width: 100%;
             max-height: 100%;
             position: absolute;
             left: 9px;
-          }
-          .fbutton .fbutton--svg {
-            left: 7px;
-            top: 6px;
           }
           @media only screen and (min-width: 768px) {
             .float_buttons .fbutton .fbutton--svg {
@@ -176,6 +172,16 @@
             opacity: 1;
           }
 
+          .animate_svg {
+            width: 21px;
+            height: 21px;
+          }
+          @media only screen and (min-width: 768px) {
+            .animate_svg {
+              width: 29px;
+              height: 29px;
+            }
+          }
           .animate_svg:hover .line1 {
             transform: translate(5.468px, 10px);
           }
@@ -398,13 +404,13 @@
     <script>
       var button = document.getElementById("toggleButton");
       var list = document.querySelector(".float_buttons");
-      var noShowUrls = 'https://www.audi.com.mx/mx/web/es/certified-plus.html'
+      var noShowUrls = "https://www.audi.com.mx/mx/web/es/certified-plus.html";
       var url = window.location.href;
       var subcadena2 = url.substring(0, noShowUrls.length);
 
       list.style.display = "none";
       if (subcadena2 === noShowUrls) button.style.display = "none";
-      
+
       button.addEventListener("click", function () {
         var menuIcon = document.querySelector(".animate_svg");
         menuIcon.classList.toggle("active");
@@ -414,7 +420,7 @@
         } else {
           list.style.display = "none";
         }
-      })
+      });
     </script>
 
     <div>

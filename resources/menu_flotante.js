@@ -38,6 +38,7 @@ $(document).ready(function () {
       margin-bottom: 15px !important;
       display: flex;
       align-items: center;
+      justify-content: center;
       color: white !important;
       text-decoration: none !important;
     }
@@ -115,17 +116,12 @@ $(document).ready(function () {
       position: absolute;
       left: 48px;
     }
-    .float_buttons .fbutton .fbutton--svg,
-    .fbutton .fbutton--svg {
+    .float_buttons .fbutton .fbutton--svg{
       display: block;
       max-width: 100%;
       max-height: 100%;
       position: absolute;
       left: 9px;
-    }
-    .fbutton .fbutton--svg {
-      left: 7px;
-      top: 6px;
     }
     @media only screen and (min-width: 768px) {
       .float_buttons .fbutton .fbutton--svg {
@@ -156,6 +152,16 @@ $(document).ready(function () {
       opacity: 1;
     }
 
+    .animate_svg {
+      width: 21px;
+      height: 21px;
+    }
+    @media only screen and (min-width: 768px) {
+      .animate_svg {
+        width: 29px;
+        height: 29px;
+      }
+    }
     .animate_svg.active:hover svg {
       transition: all 0.5s;
       transform: rotate(90deg);
@@ -378,7 +384,7 @@ $(document).ready(function () {
 
   var button = document.getElementById("toggleButton");
   var list = document.querySelector(".float_buttons");
-  var noShowUrls = 'https://www.audi.com.mx/mx/web/es/certified-plus'
+  var noShowUrls = 'https://www.audi.com.mx/mx/web/es/certified-plus';
   var url = window.location.href;
   var subcadena2 = url.substring(0, noShowUrls.length);
   
