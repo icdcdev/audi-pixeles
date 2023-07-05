@@ -3,16 +3,16 @@ $(document).ready(function () {
   var menuFlotante = document.createElement("div");
   menuFlotante.className = "cotainer_float_buttons";
   menuFlotante.style =
-    "position: fixed; top: 70px; display: flex; flex-direction: column; align-items: flex-end; right: 20px; overflow: hidden; z-index: 99;";
+    "position: fixed; top: 150px; display: flex; flex-direction: column; align-items: flex-end; right: 27px; overflow: hidden; z-index: 99;";
   menuFlotante.innerHTML = `
-<div class="float_buttons">
+  <div class="float_buttons">
   <style type="text/css">
-      .cotainer_float_buttons{
-          height: 305px;
-      }
-      @media only screen and (min-width: 768px) {
+    .cotainer_float_buttons {
+      height: 305px;
+    }
+    @media only screen and (min-width: 768px) {
       .cotainer_float_buttons {
-          height: 405px;
+        height: 405px;
       }
     }
     .float_buttons {
@@ -23,8 +23,9 @@ $(document).ready(function () {
       overflow: hidden;
       z-index: 99;
     }
-    .fbutton{
+    .fbutton {
       margin-top: auto;
+      border: none;
     }
     .float_buttons .fbutton,
     .fbutton {
@@ -116,7 +117,7 @@ $(document).ready(function () {
       position: absolute;
       left: 48px;
     }
-    .float_buttons .fbutton .fbutton--svg{
+    .float_buttons .fbutton .fbutton--svg {
       display: block;
       max-width: 100%;
       max-height: 100%;
@@ -162,13 +163,18 @@ $(document).ready(function () {
         height: 29px;
       }
     }
+
+    .line{
+      /* transform="translate(5.468px, 17.549px)" */
+      transform: translate(5.468px, 17.549px);
+    }
+    .animate_svg:hover .line1 {
+      transform: translate(5.468px, 10px);
+    }
+
     .animate_svg.active:hover svg {
       transition: all 0.5s;
       transform: rotate(90deg);
-    }
-
-    .animate_svg:hover .line1 {
-      transform: translate(5.468px, 10px);
     }
 
     .animate_svg.active .line1 {
@@ -363,17 +369,14 @@ $(document).ready(function () {
         <path
           class="line line1"
           d="M0,2.685H59.064V0H0Z"
-          transform="translate(5.468 17.549)"
         ></path>
         <path
           class="line line2"
           d="M0,18.793H59.064V16.108H0ZM0"
-          transform="translate(5.468 17.549)"
         ></path>
         <path
           class="line line3"
           d="M0,34.9H59.064V32.217H0ZM0"
-          transform="translate(5.468 17.549)"
         ></path>
       </svg>
     </div>
