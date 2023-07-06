@@ -3,7 +3,7 @@ $(document).ready(function () {
   var menuFlotante = document.createElement("div");
   menuFlotante.className = "cotainer_float_buttons";
   menuFlotante.style =
-    "position: fixed; top: 150px; display: flex; flex-direction: column; align-items: flex-end; right: 27px; overflow: hidden; z-index: 99;";
+    "position: fixed; top: 70px; display: flex; flex-direction: column; align-items: flex-end; right: 27px; overflow: hidden; z-index: 99;";
   menuFlotante.innerHTML = `
   <div class="float_buttons">
   <style type="text/css">
