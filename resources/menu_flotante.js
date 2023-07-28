@@ -242,7 +242,7 @@ $(document).ready(function () {
   </a>
   <a
     class="fbutton m-dM-none--1"
-    onClick="function addBF(btnItem,event){if(btnItem.href===''){event.preventDefault();}else{location.href='https://www.audi.com.mx/mx/web/es/experiencia/audi-promociones.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones'}btnItem.classList.add('active');btnItem.setAttribute('href','https://www.audi.com.mx/mx/web/es/experiencia/audi-promociones.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones');return false;} addBF(this,event);return false;"
+    onClick="function addBF(btnItem,event){if(btnItem.href===''){event.preventDefault();}else{location.href='https://www.audi.com.mx/mx/web/es/experiencia/promocAudi.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones'}btnItem.classList.add('active');btnItem.setAttribute('href','https://www.audi.com.mx/mx/web/es/experiencia/promocAudi.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones');return false;} addBF(this,event);return false;"
   >
     <span class="fbutton--svg">
       <svg viewBox="0 0 48 48">
@@ -312,7 +312,7 @@ $(document).ready(function () {
   </a>
   <a
     class="fbutton m-d-none"
-    href="https://www.audi.com.mx/mx/web/es/experiencia/audi-promociones.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones"
+    href="https://www.audi.com.mx/mx/web/es/experiencia/promocAudi.html?csref=dsp:icdc:Bc:menu-flotante:c:audi:audi.com.mx:mt~o:id~promociones"
   >
     <span class="fbutton--svg">
       <svg viewBox="0 0 48 48">
@@ -387,10 +387,10 @@ $(document).ready(function () {
 
   var button = document.getElementById("toggleButton");
   var list = document.querySelector(".float_buttons");
-  var noShowUrls = 'https://www.audi.com.mx/mx/web/es/certified-plus';
+  var noShowUrls = "https://www.audi.com.mx/mx/web/es/certified-plus";
   var url = window.location.href;
   var subcadena2 = url.substring(0, noShowUrls.length);
-  
+
   list.style.display = "none";
   if (subcadena2 === noShowUrls) button.style.display = "none";
 
