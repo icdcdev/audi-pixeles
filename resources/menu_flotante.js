@@ -137,7 +137,8 @@ $(document).ready(function () {
     @media only screen and (min-width: 768px) {
       .float_buttons .fbutton .fbutton--svg svg,
       .fbutton .fbutton--svg svg {
-        width: 29px;
+        width: 28px;
+        height: 28px;
       }
     }
     .float_buttons .fbutton:hover {
@@ -159,17 +160,13 @@ $(document).ready(function () {
     }
     @media only screen and (min-width: 768px) {
       .animate_svg {
-        width: 29px;
-        height: 29px;
+        width: 28px;
+        height: 28px;
       }
     }
 
-    .line{
-      /* transform="translate(5.468px, 17.549px)" */
-      transform: translate(5.468px, 17.549px);
-    }
     .animate_svg:hover .line1 {
-      transform: translate(5.468px, 10px);
+      transform: translateY(-5px)
     }
 
     .animate_svg.active:hover svg {
@@ -183,13 +180,13 @@ $(document).ready(function () {
 
     @keyframes line1-active {
       0% {
-        transform: translate(5.468px, 10px);
+        transform: translateY(-4px)
       }
       50% {
-        transform: translate(5.468px, 33px);
+        transform: translate(0);
       }
       100% {
-        transform: rotate(45deg) translate(20px, -1px);
+        transform: rotate(45deg) translate(6px, -6px);
       }
     }
 
@@ -198,7 +195,7 @@ $(document).ready(function () {
     }
 
     .animate_svg:hover .line3 {
-      transform: translate(5.468px, 24px);
+      transform: translateY(5px);
     }
 
     .animate_svg.active .line3 {
@@ -207,13 +204,13 @@ $(document).ready(function () {
 
     @keyframes line3-active {
       0% {
-        transform: translate(5.468px, 24px);
+        transform: translateY(4px)
       }
       50% {
-        transform: translate(5.468px, 0px);
+        transform: translate(0, 0px);
       }
       100% {
-        transform: rotate(-45deg) translate(-30px, 16px);
+        transform: rotate(-45deg) translate(-14px, -2px);
       }
     }
 
@@ -365,19 +362,10 @@ $(document).ready(function () {
 <button id="toggleButton" class="fbutton">
   <span class="fbutton--svg">
     <div class="animate_svg">
-      <svg viewBox="0 0 70 70">
-        <path
-          class="line line1"
-          d="M0,2.685H59.064V0H0Z"
-        ></path>
-        <path
-          class="line line2"
-          d="M0,18.793H59.064V16.108H0ZM0"
-        ></path>
-        <path
-          class="line line3"
-          d="M0,34.9H59.064V32.217H0ZM0"
-        ></path>
+      <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect class="line line1" y="5" width="29" height="2" fill="white"/>
+        <rect class="line line2" y="13.1517" width="29" height="2" fill="white"/>
+        <rect class="line line3" y="21.3035" width="29" height="2" fill="white"/>
       </svg>
     </div>
   </span>
