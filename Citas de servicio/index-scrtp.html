@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="ie=edge" />
-    <base href="%PUBLIC_URL%/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="En Volkswagen Vehículos Comerciales estamos comprometidos con la satisfacción de nuestros clientes, actualmente comercializamos Saveiro, Amarok, Caddy, Transporter y Crafter."
-    />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <title>Portafolio VWVC</title>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
+
+<head>
+  <meta charset="utf-8" http-equiv="X-UA-Compatible" content="ie=edge" />
+  <base href="%PUBLIC_URL%/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description"
+    content="En Volkswagen Vehículos Comerciales estamos comprometidos con la satisfacción de nuestros clientes, actualmente comercializamos Saveiro, Amarok, Caddy, Transporter y Crafter." />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <title>Portafolio VWVC</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
 
       /*function displayContent(){
         $(".citas-servicio--btnW").removeClass("active");
@@ -37,7 +36,7 @@
           number1: "527441813805",
           number2: "",
           number3: "527441415631",
-          greeting: "Hola%20%2AAudi%20Acapulco%2A%2C" 
+          greeting: "Hola%20%2AAudi%20Acapulco%2A%2C"
         },
         {
           site: "www.audicenteraguascalientes.com.mx",
@@ -266,13 +265,13 @@
       ];
 
       /** PIXEL OAXACA **/
-      if( window.location.hostname === "www.audicenteroaxaca.com.mx" ){
+      if (window.location.hostname === "www.audicenteroaxaca.com.mx") {
         var menuFlotante = document.createElement("noscript");
         menuFlotante.innerHTML = `
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ6XFCF" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
 
         $("body").append(menuFlotante);
-        
+
 
         const exampleScript = getScriptContent(`
         <script>
@@ -283,17 +282,17 @@
           })(window,document,'script','dataLayer','GTM-KZ6XFCF');
         <\/script>
         `),
-        s = document.createElement("script"),
-        t = document.createTextNode(exampleScript);
+          s = document.createElement("script"),
+          t = document.createTextNode(exampleScript);
 
         s.appendChild(t);
 
         document.getElementsByTagName("head")[0].appendChild(s);
 
         function getScriptContent(htmlStr) {
-            const tempDiv = document.createElement("div");
-            tempDiv.innerHTML = htmlStr;
-            return tempDiv.innerText;
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = htmlStr;
+          return tempDiv.innerText;
         }
       }
       /** FIN PIXEL OAXACA **/
@@ -540,6 +539,12 @@
               </svg>
               <span>Cita de Servicio</span>
             </a>
+            <a id="btnRefacciones" class="citas-servicio--menu__content--btn btnCS4" onclick="sendMessageLink();" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="31.763" height="32.958" viewBox="0 0 36.899 44.246">
+                <path id="inspection-small" d="M34.562.5,36.4,6.01v5.51l-1.837,1.837V26.215H36.4V39.072a3.684,3.684,0,0,1-3.674,3.674H30.888a3.684,3.684,0,0,1-3.674-3.674h0V26.215h1.837V13.357l-1.837-1.837V6.01L29.052.5ZM7.01.5V6.01L8.847,7.847h5.51L16.194,6.01V.5h1.837L21.7,4.174v7.347l-5.51,5.51V38.154c0,2.02-1.837,4.592-4.041,4.592h-1.1c-2.2,0-4.041-2.388-4.041-4.592V17.031L1.5,11.521V4.174L5.174.5Z" transform="translate(-0.5 0.5)" fill="rgba(255,255,255,0)" stroke="#fff" stroke-width="2" fill-rule="evenodd"/>
+              </svg>
+              <span>Refacciones</span>
+            </a>
           </div>
         </div>
       </div>`;
@@ -549,309 +554,352 @@
 
       const exampleScript = getScriptContent(`
       <script>
-        function getDataContact(){
-          let contacts = [
-            {
-              site: "www.audicenteracapulco.com.mx",
-              number1: "527441813805",
-              number2: "",
-              number3: "527441415631",
-              greeting: "Hola%20%2AAudi%20Acapulco%2A%2C" 
-            },
-            {
-              site: "www.audicenteraguascalientes.com.mx",
-              number1: "",
-              number2: "",
-              number3: "524494185095",
-              greeting: "Hola%20%2AAudi%20Aguascalientes%2A%2C"
-            },
-            {
-              site: "www.audicenter-angelopolis.com.mx",
-              number1: "522222158095",
-              number2: "522222934558",
-              number3: "522222939628",
-              greeting: "Hola%20%2AAudi%20Angel%C3%B3polis%2A%2C"
-            },
-            {
-              site: "www.audicentercancun.com.mx",
-              number1: "529982607451",
-              number2: "529982607451",
-              number3: "529982605089",
-              greeting: "Hola%20%2AAudi%20Canc%C3%BAn%2A%2C"
-            },
-            {
-              site: "www.audicentercelaya.com.mx",
-              number1: "524611593235",
-              number2: "",
-              number3: "524611593235",
-              greeting: "Hola%20%2AAudi%20Celaya%2A%2C"
-            },
-            {
-              site: "www.audicenterchihuahua.com.mx",
-              number1: "526141499482",
-              number2: "526142351871",
-              number3: "526143206899",
-              greeting: "Hola%20%2AAudi%20Chihuahua%2A%2C"
-            },
-            {
-              site: "www.audicentercoapa.com.mx",
-              number1: "525580083661",
-              number2: "525571307033",
-              number3: "525579017545",
-              greeting: "Hola%20%2AAudi%20Coapa%2A%2C"
-            },
-            {
-              site: "www.audicentercuernavaca.com.mx",
-              number1: "527773288774",
-              number2: "527773288774",
-              number3: "527772255426",
-              greeting: "Hola%20%2AAudi%20Cuernavaca%2A%2C"
-            },
-            {
-              site: "www.audicenterculiacan.com.mx",
-              number1: "526671917061",
-              number2: "526671917061",
-              number3: "526671917061",
-              greeting: "Hola%20%2AAudi%20Culiac%C3%A1n%2A%2C"
-            },
-            {
-              site: "www.audicenteresmeralda.com.mx",
-              number1: "525585494512",
-              number2: "525585494512",
-              number3: "525585494512",
-              greeting: "Hola%20%2AAudi%20Esmeralda%2A%2C"
-            },
-            {
-              site: "www.audicentergalerias.com.mx",
-              number1: "523316992030",
-              number2: "523316992030",
-              number3: "523339543420",
-              greeting: "Hola%20%2AAudi%20Galer%C3%ADas%2A%2C"
-            },
-            {
-              site: "www.audicenterinsurgentes.com.mx",
-              number1: "525580083661",
-              number2: "",
-              number3: "525578651513",
-              greeting: "Hola%20%2AAudi%20Insurgentes%2A%2C"
-            },
-            {
-              site: "www.audicenterinterlomas.com.mx",
-              number1: "525563592285",
-              number2: "525618190310",
-              number3: "525510404124",
-              greeting: "Hola%20%2AAudi%20Interlomas%2A%2C"
-            },
-            {
-              site: "www.audicenterirapuato.com.mx",
-              number1: "524626354541",
-              number2: "",
-              number3: "524626354541",
-              greeting: "Hola%20%2AAudi%20Irapuato%2A%2C"
-            },
-            {
-              site: "www.audicenterlaguna.com.mx",
-              number1: "528712234221",
-              number2: "528712234221",
-              number3: "528712234221",
-              greeting: "Hola%20%2AAudi%20Laguna%2A%2C"
-            },
-            {
-              site: "www.audicenterleon.com.mx",
-              number1: "524777810930",
-              number2: "524771617237",
-              number3: "524771223535",
-              greeting: "Hola%20%2AAudi%20Le%C3%B3n%2A%2C"
-            },
-            {
-              site: "www.audicenterlopezmateos.com.mx",
-              number1: "523322619708",
-              number2: "523318502172",
-              number3: "523321061648",
-              greeting: "Hola%20%2AAudi%20L%C3%B3pez%20Mateos%2A%2C"
-            },
-            {
-              site: "www.audicenterloscabos.com.mx",
-              number1: "526242403145",
-              number2: "526242403145",
-              number3: "526242403145",
-              greeting: "Hola%20%2AAudi%20Los%20Cabos%2A%2C"
-            },
-            {
-              site: "www.audicentermasaryk.com.mx",
-              number1: "525580083661",
-              number2: "525512280009",
-              number3: "525541877189",
-              greeting: "Hola%20%2AAudi%20Masaryk%2A%2C"
-            },
-            {
-              site: "www.audicentermerida.com.mx",
-              number1: "529996118811",
-              number2: "529996118811",
-              number3: "529996118811",
-              greeting: "Hola%20%2AAudi%20M%C3%A9rida%2A%2C"
-            },
-            {
-              site: "www.audicentermexicali.com.mx",
-              number1: "526643287346",
-              number2: "526642185975",
-              number3: "526862244383",
-              greeting: "Hola%20%2AAudi%20Mexicali%2A%2C"
-            },
-            {
-              site: "www.audicentermorelia.com.mx",
-              number1: "524436922107",
-              number2: "524432730694",
-              number3: "524435049627",
-              greeting: "Hola%20%2AAudi%20Morelia%2A%2C"
-            },
-            {
-              site: "www.audicenterpatria.com.mx",
-              number1: "523322634230 ",
-              number2: "523318502172",
-              number3: "523311471574 ",
-              greeting: "Hola%20%2AAudi%20Patria%2A%2C"
-            },
-            {
-              site: "www.audicenterpedregal.com.mx",
-              number1: "525580083661",
-              number2: "525541877047",
-              number3: "525545248446",
-              greeting: "Hola%20%2AAudi%20Pedregal%2A%2C"
-            },
-            {
-              site: "www.audicentersantafe.com.mx",
-              number1: "525580320237",
-              number2: "525580320237",
-              number3: "525580320237",
-              greeting: "Hola%20%2AAudi%20Santa%20F%C3%A9%2A%2C"
-            },
-            {
-              site: "www.audicentersatelite.mx",
-              number1: "525543320865",
-              number2: "525585999108",
-              number3: "525586033313",
-              greeting: "Hola%20%2AAudi%20Sat%C3%A9lite%2A%2C"
-            },
-            {
-              site: "www.audicenterserdan.com.mx",
-              number1: "522211124852",
-              number2: "522221130012",
-              number3: "522211124844",
-              greeting: "Hola%20%2AAudi%20Serd%C3%A1n%2A%2C"
-            },
-            {
-              site: "www.audicentersonora.com.mx",
-              number1: "526623495092",
-              number2: "526623495092",
-              number3: "526623495092",
-              greeting: "Hola%20%2AAudi%20Sonora%2A%2C"
-            },
-            {
-              site: "www.audicentertijuana.com.mx",
-              number1: "526643287346",
-              number2: "526642185975",
-              number3: "526161035046",
-              greeting: "Hola%20%2AAudi%20Tijuana%2A%2C"
-            },
-            {
-              site: "www.audicentertoluca.com.mx",
-              number1: "527122000196",
-              number2: "527122000196",
-              number3: "527291020031",
-              greeting: "Hola%20%2AAudi%20Toluca%2A%2C"
-            },
-            {
-              site: "www.audicentertuxtla.com.mx",
-              number1: "529616174730",
-              number2: "529616174730",
-              number3: "529613607771",
-              greeting: "Hola%20%2AAudi%20Tuxtla%2A%2C"
-            },
-            {
-              site: "www.audicentervallejo.com.mx",
-              number1: "525510162074",
-              number2: "525612811746",
-              number3: "525568411784",
-              greeting: "Hola%20%2AAudi%20Vallejo%2A%2C"
-            },
-            {
-              site: "www.audicenterveracruz.com.mx",
-              number1: "522291196963",
-              number2: "522292880738",
-              number3: "522299827931",
-              greeting: "Hola%20%2AAudi%20Veracruz%2A%2C"
-            }
-          ];
-          const result = contacts.find(contact => contact.site === window.location.hostname);
-          return result;
-        }
-        function displayContent(){
-          $(".citas-servicio--btnW").removeClass("active");
-          $(".citas-servicio--menu").addClass("active");
-        }   
-        function displayIcon(){
-          $(".citas-servicio--menu").removeClass("active");
-          $(".citas-servicio--btnW").addClass("active");
-        } 
+        function getDataContact()
+	{
+		return [
+		{
+			site: "www.audicenteracapulco.com.mx",
+			number1: "527441813805",
+			number2: "",
+			number3: "527441415631",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Acapulco%2A%2C"
+		},
+		{
+			site: "www.audicenteraguascalientes.com.mx",
+			number1: "",
+			number2: "",
+			number3: "524494185095",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Aguascalientes%2A%2C"
+		},
+		{
+			site: "www.audicenter-angelopolis.com.mx",
+			number1: "522222158095",
+			number2: "522222934558",
+			number3: "522222939628",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Angel%C3%B3polis%2A%2C"
+		},
+		{
+			site: "www.audicentercancun.com.mx",
+			number1: "529982607451",
+			number2: "529982607451",
+			number3: "529982912614",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Canc%C3%BAn%2A%2C"
+		},
+		{
+			site: "www.audicentercelaya.com.mx",
+			number1: "524611593235",
+			number2: "",
+			number3: "524611593235",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Celaya%2A%2C"
+		},
+		{
+			site: "www.audicenterchihuahua.com.mx",
+			number1: "526141499482",
+			number2: "526142351871",
+			number3: "526143206899",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Chihuahua%2A%2C"
+		},
+		{
+			site: "www.audicentercoapa.com.mx",
+			number1: "525641863696",
+			number2: "525571307033",
+			number3: "525579017545",
+			number4: "525579017545",
+			greeting: "Hola%20%2AAudi%20Coapa%2A%2C"
+		},
+		{
+			site: "www.audicentercuernavaca.com.mx",
+			number1: "527773288774",
+			number2: "527773288774",
+			number3: "527772255426",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Cuernavaca%2A%2C"
+		},
+		{
+			site: "www.audicenterculiacan.com.mx",
+			number1: "526671917061",
+			number2: "526671917061",
+			number3: "526671917061",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Culiac%C3%A1n%2A%2C"
+		},
+		{
+			site: "www.audicenteresmeralda.com.mx",
+			number1: "525585494512",
+			number2: "525585494512",
+			number3: "525585494512",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Esmeralda%2A%2C"
+		},
+		{
+			site: "www.audicentergalerias.com.mx",
+			number1: "523316992030",
+			number2: "523316992030",
+			number3: "523339543420",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Galer%C3%ADas%2A%2C"
+		},
+		{
+			site: "www.audicenterinsurgentes.com.mx",
+			number1: "525641863700",
+			number2: "527225322127",
+			number3: "525578651513",
+			number4: "525578651510",
+			greeting: "Hola%20%2AAudi%20Insurgentes%2A%2C"
+		},
+		{
+			site: "www.audicenterinterlomas.com.mx",
+			number1: "525563592285",
+			number2: "525618190310",
+			number3: "525510404124",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Interlomas%2A%2C"
+		},
+		{
+			site: "www.audicenterirapuato.com.mx",
+			number1: "524626354541",
+			number2: "",
+			number3: "524626354541",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Irapuato%2A%2C"
+		},
+		{
+			site: "www.audicenterlaguna.com.mx",
+			number1: "528712234221",
+			number2: "528712234221",
+			number3: "528712234221",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Laguna%2A%2C"
+		},
+		{
+			site: "www.audicenterleon.com.mx",
+			number1: "524777810930",
+			number2: "524771617237",
+			number3: "524771223535",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Le%C3%B3n%2A%2C"
+		},
+		{
+			site: "www.audicenterlopezmateos.com.mx",
+			number1: "523322619708",
+			number2: "523322619708",
+			number3: "523321061648",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20L%C3%B3pez%20Mateos%2A%2C"
+		},
+		{
+			site: "www.audicenterloscabos.com.mx",
+			number1: "526242403145",
+			number2: "526242403145",
+			number3: "526242403145",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Los%20Cabos%2A%2C"
+		},
+		{
+			site: "www.audicenter-masaryk.com.mx",
+			number1: "525641863713",
+			number2: "525580442120",
+			number3: "525541877189",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Masaryk%2A%2C"
+		},
+		{
+			site: "www.audicentermerida.com.mx",
+			number1: "529996118811",
+			number2: "529996118811",
+			number3: "529996118811",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20M%C3%A9rida%2A%2C"
+		},
+		{
+			site: "www.audicentermexicali.com.mx",
+			number1: "526643287346",
+			number2: "526643287346",
+			number3: "526862244383",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Mexicali%2A%2C"
+		},
+		{
+			site: "www.audicentermorelia.com.mx",
+			number1: "524436922107",
+			number2: "524432730694",
+			number3: "524435049627",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Morelia%2A%2C"
+		},
+		{
+			site: "www.audicenterpatria.com.mx",
+			number1: "523322634230",
+			number2: "523312948075",
+			number3: "523311471574",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Patria%2A%2C"
+		},
+		{
+			site: "www.audicenterpedregal.com.mx",
+			number1: "525641863708",
+			number2: "525541877047",
+			number3: "525545248446",
+			number4: "525541877060",
+			greeting: "Hola%20%2AAudi%20Pedregal%2A%2C"
+		},
+		{
+			site: "www.audicentersantafe.com.mx",
+			number1: "525580320237",
+			number2: "525580320237",
+			number3: "525580320237",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Santa%20F%C3%A9%2A%2C"
+		},
+		{
+			site: "www.audicentersatelite.mx",
+			number1: "525543320865",
+			number2: "525585999108",
+			number3: "525586033313",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Sat%C3%A9lite%2A%2C"
+		},
+		{
+			site: "www.audicenterserdan.com.mx",
+			number1: "522211462221",
+			number2: "522215228451",
+			number3: "522211124844",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Serd%C3%A1n%2A%2C"
+		},
+		{
+			site: "www.audicentersonora.com.mx",
+			number1: "526623495092",
+			number2: "526623495092",
+			number3: "526623495092",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Sonora%2A%2C"
+		},
+		{
+			site: "www.audicentertijuana.com.mx",
+			number1: "528711075081",
+			number2: "528711075081",
+			number3: "528711075081",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Tijuana%2A%2C"
+		},
+		{
+			site: "www.audicentertoluca.com.mx",
+			number1: "527122000196",
+			number2: "527122000196",
+			number3: "527291020031",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Toluca%2A%2C"
+		},
+		{
+			site: "www.audicentertuxtla.com.mx",
+			number1: "529616174730",
+			number2: "529616174730",
+			number3: "529613607771",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Tuxtla%2A%2C"
+		},
+		{
+			site: "www.audicentervallejo.com.mx",
+			number1: "525513112998",
+			number2: "525612811746",
+			number3: "525539871906",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Vallejo%2A%2C"
+		},
+		{
+			site: "www.audicenterveracruz.com.mx",
+			number1: "522291196963",
+			number2: "522294363168",
+			number3: "522299827931",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Veracruz%2A%2C"
+		},
+		{
+			site: "www.audicentermonterrey.com.mx",
+			number1: "528119882289",
+			number2: "528119882088",
+			number3: "528119882251",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Monterrey%2A%2C"
+		},
+		{
+			site: "www.audicentercalzadadelvalle.com.mx",
+			number1: "528111068062",
+			number2: "528123542323",
+			number3: "528117628293",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Calzada%20Del%20Valle%2A%2C"
+		},
+		{
+			site: "www.audicentersanpedro.com.mx",
+			number1: "528117789385",
+			number2: "528123542323",
+			number3: "528117619439",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20San%20Pedro%2A%2C"
+		},
+		{
+			site: "www.audicentercumbres.com.mx",
+			number1: "528118008258",
+			number2: "528123542323",
+			number3: "528116606723",
+			number4: "",
+			greeting: "Hola%20%2AAudi%20Cumbres%2A%2C"
+		}].find(e => e.site === window.location.hostname)
+	}
 
-        function sendMessageLink(){
-          displayIcon();
-        }
-        function checkList(){
-          let isConcesionaria = getDataContact();
+	function displayContent()
+	{
+		$(".citas-servicio--btnW").removeClass("active"), $(".citas-servicio--menu").addClass("active")
+	}
 
-          let messageVentas = "%20estoy%20interesado%20en%20un%20vehículo";
-          let messageSeminuevos = "%20estoy%20interesado%20en%20un%20vehículo%20seminuevo";
-          let messageCitaServicio = "%20estoy%20interesado%20en%20agendar%20una%20cita%20de%20servicio";
+	function displayIcon()
+	{
+		$(".citas-servicio--menu").removeClass("active"), $(".citas-servicio--btnW").addClass("active")
+	}
 
-          if ( isConcesionaria == null ) {
-            $(".citas-servicio").addClass("d-none");
-          } else {
-            $(".citas-servicio").addClass("d-show");
-            
-            if(isConcesionaria.number1 === ""){
-              $(".btnCS1").addClass("d-none");
-            } else {
-              $("#btnVentas").attr("href", "https://wa.me/"+isConcesionaria.number1+"?text="+isConcesionaria.greeting+messageVentas )
-            }
+	function sendMessageLink()
+	{
+		displayIcon()
+	}
 
-            if(isConcesionaria.number2 === ""){
-              $(".btnCS2").addClass("d-none");
-            } else {
-              $("#btnSeminuevos").attr("href", "https://wa.me/"+isConcesionaria.number2+"?text="+isConcesionaria.greeting+messageSeminuevos )
-            }
-
-            if(isConcesionaria.number3 === ""){
-              $(".btnCS3").addClass("d-none");
-            } else {
-              $("#btnServicio").attr("href", "https://wa.me/"+isConcesionaria.number3+"?text="+isConcesionaria.greeting+messageCitaServicio )
-            }
-          } 
-        }
-        checkList();
+	function checkList()
+	{
+		let e = getDataContact();
+		null == e ? $(".citas-servicio").addClass("d-none") : ($(".citas-servicio").addClass("d-show"), "" === e.number1 ? $(".btnCS1").addClass("d-none") : $("#btnWCVentas").attr("href", "https://wa.me/" + e.number1 + "?text=" + e.greeting + "%20estoy%20interesado%20en%20un%20vehículo"), "" === e.number2 ? $(".btnCS2").addClass("d-none") : $("#btnWCSeminuevos").attr("href", "https://wa.me/" + e.number2 + "?text=" + e.greeting + "%20estoy%20interesado%20en%20un%20vehículo%20seminuevo"), "" === e.number3 ? $(".btnCS3").addClass("d-none") : $("#btnWCServicio").attr("href", "https://wa.me/" + e.number3 + "?text=" + e.greeting + "%20estoy%20interesado%20en%20agendar%20una%20cita%20de%20servicio"), "" === e.number4 ? $(".btnCS4").addClass("d-none") : $("#btnRefacciones").attr("href", "https://wa.me/" + e.number4 + "?text=" + e.greeting + "%20estoy%20interesado%20en%20refacciones") )
+	}
+	checkList();
       <\/script>
       `),
-      s = document.createElement("script"),
-      t = document.createTextNode(exampleScript);
+        s = document.createElement("script"),
+        t = document.createTextNode(exampleScript);
 
       s.appendChild(t);
 
       document.getElementsByTagName("head")[0].appendChild(s);
 
       function getScriptContent(htmlStr) {
-          const tempDiv = document.createElement("div");
-          tempDiv.innerHTML = htmlStr;
-          return tempDiv.innerText;
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = htmlStr;
+        return tempDiv.innerText;
       }
 
 
     });  
-    </script>
-  
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+  </script>
+
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
 </html>
