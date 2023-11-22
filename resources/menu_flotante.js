@@ -156,7 +156,7 @@ $(document).ready(function () {
 
     .animate_svg {
       width: 21px;
-      height: 21px;
+      height: 28px;
     }
     @media only screen and (min-width: 768px) {
       .animate_svg {
@@ -269,7 +269,7 @@ $(document).ready(function () {
         />
       </svg>
     </span>
-    <span class="fbutton--span">Audi Postventa</span>
+    <span class="fbutton--span">Servicios Postventa</span>
   </a>
   <a
     class="fbutton m-dM-none--2"
@@ -339,7 +339,7 @@ $(document).ready(function () {
         />
       </svg>
     </span>
-    <span class="fbutton--span">Audi Postventa</span>
+    <span class="fbutton--span">Servicios Postventa</span>
   </a>
   <a
     class="fbutton m-d-none"
