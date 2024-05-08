@@ -28,7 +28,7 @@
         background: #FFFFFF;
         color: #000000;
         height: calc(95vh - 72px);
-        width: calc(80vw - 72px);
+        width: calc(95vw - 72px);
         overflow-y: scroll;
         -ms-overflow-style: none;
         /* Internet Explorer 10+ */
@@ -46,7 +46,12 @@
         border-radius: 6px;
         
 
-        padding: 42px 69px 38px 69px;
+        padding: 32px 29px 28px 29px;
+
+        font-size: 16px;
+        font-family: AudiType, sans-serif;
+        font-stretch: 105%;
+        line-height: 20px;
 
         &::-webkit-scrollbar {
             display: none;
@@ -55,7 +60,8 @@
 
         @include tablet() {
             width: 80vw;
-            height: 70vh;
+            height: 80vh;
+            padding: 42px 69px 38px 69px;
         }
 
 
@@ -107,7 +113,8 @@
 
     &__close{
         position: fixed;
-        right: 25px;
+        right: 15px;
+        top: 15px;
 
         button{
             background-color: transparent;
@@ -128,30 +135,57 @@
             margin: auto;
             text-align: center;
 
-            margin-bottom: 14px;
+            margin-bottom: 10px;
+
+            @include tablet () {
+                margin-bottom: 14px;
+            }
         }
         &_span{
             display: block;
             margin: auto;
             text-align: center;
+            margin-bottom: 35px;
 
-            margin-bottom: 51px;
+            font-size: 16px;
+            font-family: AudiType, sans-serif;
+            font-stretch: 105%;
+            line-height: 20px;
+            font-weight: bold;
+            
+            @include tablet () {
+                margin-bottom: 51px;
+            }
         }
         &_description{
-            margin-bottom: 76px;
+            margin-bottom: 45px;
+
+            font-size: 16px;
+            font-family: AudiType, sans-serif;
+            font-stretch: 105%;
+            line-height: 20px;
+            
+            @include tablet () {
+                margin-bottom: 65px;
+            }
         }
     }
 
     &__content{
-        .ensToggleRow {
+        .consent-mode__content_ensToggleRow {
             margin-bottom: 20px;
             opacity: 1 !important;
             padding-top: 15px;
             text-align: left;
 
-            .ens-toggle-row-item{
-                .ensToggleLabel{
-                    font-family: AudiType-Normal,Helvetica,Arial,sans-serif !important;
+            .consent-mode__content_ens-toggle-row-item{
+                .consent-mode__content_ensToggleLabel{
+                    font-size: 16px;
+                    font-family: AudiType, sans-serif;
+                    font-stretch: 105%;
+                    line-height: 20px;
+                    font-weight: bold;
+                    
                     border: none;
                     padding: 0;
                     margin: 0;
@@ -166,7 +200,7 @@
 
                     cursor: default;
                 }
-                .card{
+                .consent-mode__content_card{
                     border: 0;
                     font: inherit;
                     font-size: 100%;
@@ -186,7 +220,7 @@
                     cursor: pointer;
                     margin-top: 7px;
 
-                    .ensCheckbox{
+                    .consent-mode__content_ensCheckbox{
                         position: absolute !important;
                         height: 1px;
                         width: 1px;
@@ -197,7 +231,7 @@
                         display: none;
                     }
 
-                    .switch{
+                    .consent-mode__content_switch{
                         background: #939393;
                         transition: 0.5s;
 
@@ -211,7 +245,7 @@
                         width: 50px;
                     }
 
-                    .toggle{
+                    .consent-mode__content_toggle{
                         background: white;
                         box-sizing: inherit;
                         background-color: #fff;
@@ -240,6 +274,37 @@
 
         summary {
             cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        &_details{
+            &_c1{
+                margin-bottom: 20px;
+                
+                @include tablet(){
+                    margin-bottom: 35px;
+                }
+            }
+            &_submenu{
+                margin-left: 35px;
+                margin-top: 27px;
+                margin-bottom: 30px;
+                color: #808080;
+
+                @include tablet(){
+                    margin-top: 47px;
+                    margin-bottom: 65px;
+                }
+            }
+            &_d2{
+                font-size: 12px;
+                font-family: AudiType, sans-serif;
+                font-stretch: 105%;
+                line-height: 15px;
+                p{
+                    margin-left: 16px;
+                }
+            }
         }
 
         hr {
@@ -250,8 +315,14 @@
     }
 
     &__submit {
+        margin-top: 50px;
         display: block;
-        text-align: end;
+        text-align: center;
+
+        @include tablet(){
+            text-align: end;
+            margin-top: 85px;
+        }
 
         &_button{
             position: relative;
@@ -293,6 +364,10 @@
             &:hover {
                 color: rgb(217, 217, 217);
                 border-color: rgb(217, 217, 217);
+            }
+
+            @include tablet(){
+                margin-left: 34px;
             }
         }
     }

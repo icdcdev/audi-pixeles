@@ -22,16 +22,16 @@
       function displayConsentMode(){
         $(".consent-mode__container").addClass("active");
       }   
-      function displayConsentMode(){
-        //$(".consent-mode__container").removeClass('active');
+      function closeConsentMode(){
+        $(".consent-mode__container").removeClass('active');
       }   
     </script>
     <div class="consent-mode">
       <div class="consent-mode__container active">
-        <div class="consent-mode__overlay" onclick="displayConsentMode();"></div>
+        <div class="consent-mode__overlay" onclick="closeConsentMode();"></div>
         <div class="consent-mode__modal">
           <div class="consent-mode__close">
-            <button onclick="displayConsentMode();">
+            <button onclick="closeConsentMode();">
               <svg xmlns="http://www.w3.org/2000/svg" width="13.975" height="13.973" viewBox="0 0 13.975 13.973"><path id="x" d="M18.521,6.344l-5.241,5.24L8.04,6.344,6.293,8.091l5.24,5.24-5.24,5.24L8.04,20.317l5.24-5.24,5.241,5.24,1.747-1.747-5.24-5.24,5.24-5.24Z" transform="translate(-6.293 -6.344)" fill="#000"/></svg>
             </button>
           </div>
@@ -50,30 +50,109 @@
           </div>
           
           <div class="consent-mode__content">
-            <div class="ensToggleRow">
-              <div class="ens-toggle-row-item">
-                <span class="ensToggleLabel">Estadística cookies</span>
-                <label class="card" for="FunctionalSlide">
-                  <input class="ensCheckbox" id="FunctionalSlide" type="checkbox" name="FunctionalSlide">
-                  <span class="switch"></span>
-                  <span class="toggle"></span>
+            <div class="consent-mode__content_ensToggleRow">
+              <div class="consent-mode__content_ens-toggle-row-item">
+                <span class="consent-mode__content_ensToggleLabel">Estadística cookies</span>
+                <label class="consent-mode__content_card" for="FunctionalSlideStadistics">
+                  <input class="consent-mode__content_ensCheckbox" id="FunctionalSlideStadistics" type="checkbox" name="FunctionalSlideStadistics">
+                  <span class="consent-mode__content_switch"></span>
+                  <span class="consent-mode__content_toggle"></span>
                 </label>
               </div>
               <p>
                 Las cookies de estadísticas permiten a los administradores de páginas web comprender mejor la interacción de los visitantes al recopilar información de manera anónima.
               </p>
-              <div>
-                <details>
-                  <summary>Detalles</summary>
+              <div class="consent-mode__content_details">
+                <details class="consent-mode__content_details_d1">
+                  <summary class="consent-mode__content_details_s1">
+                    Detalles
+                  </summary>
+                  <div class="consent-mode__content_details_submenu">
+                    <div class="consent-mode__content_details_c1">
+                      <p>
+                        Analytics_storage
+                      </p>
 
-                  <span>Analytics_storage</span>
+                      <details  class="consent-mode__content_details_d2">
+                        <summary  class="consent-mode__content_details_s2">
+                          Detalles
+                        </summary>
+                        <p>
+                          Habilita el almacenamiento de información para analíticas, como la duración de las visitas (mediante cookies).
+                        </p>
+                      </details>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
 
-                  <details>
-                    <summary>Detalles</summary>
-                    <p>
-                      Habilita el almacenamiento de información para analíticas, como la duración de las visitas (mediante cookies).
-                    </p>
-                  </details>
+            <hr/>
+            
+            <div class="consent-mode__content_ensToggleRow">
+              <div class="consent-mode__content_ens-toggle-row-item">
+                <span class="consent-mode__content_ensToggleLabel">Marketing cookies</span>
+                <label class="consent-mode__content_card" for="FunctionalSlideMarketing">
+                  <input class="consent-mode__content_ensCheckbox" id="FunctionalSlideMarketing" type="checkbox" name="FunctionalSlideMarketing">
+                  <span class="consent-mode__content_switch"></span>
+                  <span class="consent-mode__content_toggle"></span>
+                </label>
+              </div>
+              <p>
+                Las cookies de marketing se utilizan para mostrar anuncios relevantes y atractivos a los usuarios, siendo valiosas tanto para editores como para anunciantes.
+              </p>
+              <div class="consent-mode__content_details">
+                <details class="consent-mode__content_details_d1">
+                  <summary class="consent-mode__content_details_s1">
+                    Detalles
+                  </summary>
+                  
+                  <div class="consent-mode__content_details_submenu">
+                    <div class="consent-mode__content_details_c1">
+                      <p>
+                        ad_personalization
+                      </p>
+
+                      <details  class="consent-mode__content_details_d2">
+                        <summary  class="consent-mode__content_details_s2">
+                          Detalles
+                        </summary>
+                        <p>
+                          Define el consentimiento sobre la publicidad personalizada.
+                        </p>
+                      </details>
+                    </div>
+
+                    <div class="consent-mode__content_details_c1">
+                      <p>
+                        ad_storage
+                      </p>
+
+                      <details  class="consent-mode__content_details_d2">
+                        <summary  class="consent-mode__content_details_s2">
+                          Detalles
+                        </summary>
+                        <p>
+                          Habilita el almacenamiento de información para fines publicitarios (mediante cookies).
+                        </p>
+                      </details>
+                    </div>
+
+                    <div class="consent-mode__content_details_c1">
+                      <p>
+                        ad_user_data
+                      </p>
+
+                      <details  class="consent-mode__content_details_d2">
+                        <summary  class="consent-mode__content_details_s2">
+                          Detalles
+                        </summary>
+                        <p>
+                          Define el consentimiento sobre el envío a Google de datos de usuario relacionados con la publicidad.
+                        </p>
+                      </details>
+                    </div>
+                  </div>
                 </details>
               </div>
             </div>
