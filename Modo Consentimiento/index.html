@@ -19,18 +19,72 @@
   </head>
   <body>
     <script>
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
+    </script>
+    <script>
       function displayConsentMode(){
         $(".consent-mode__container").addClass("active");
       }   
       function closeConsentMode(){
-        $(".consent-mode__container").removeClass('active');
-      }   
+        $(".consent-mode__container").removeClass("active");
+      }
+      function allConsentDenied() {
+        gtag('consent', 'update', {
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied'
+        });
+
+        closeConsentMode();
+      }
+      function allConsentGranted() {
+        gtag('consent', 'update', {
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+
+        closeConsentMode();
+      }
+
+      function selectConsentUpdate() {
+        let stadisticsCheck = $('#FunctionalSlideStadistics').is(":checked");
+        let marketingCheck = $('#FunctionalSlideMarketing').is(":checked");
+
+        if ( stadisticsCheck && marketingCheck ) {
+          allConsentGranted();
+        } else if ( stadisticsCheck && !marketingCheck ) {
+          gtag('consent', 'update', {
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'ad_storage': 'denied',
+            'analytics_storage': 'granted'
+          });
+        } else if ( !stadisticsCheck && marketingCheck ) {
+          gtag('consent', 'update', {
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'ad_storage': 'granted',
+            'analytics_storage': 'denied'
+          });
+        } else {
+          allConsentDenied();
+        }
+        closeConsentMode();
+      }
     </script>
     <div class="consent-mode">
       <div class="consent-mode__container active">
         <div class="consent-mode__overlay" onclick="closeConsentMode();"></div>
         <div class="consent-mode__modal">
-          <div class="consent-mode__close">
+          <div class="consent-mode__close active">
             <button onclick="closeConsentMode();">
               <svg xmlns="http://www.w3.org/2000/svg" width="13.975" height="13.973" viewBox="0 0 13.975 13.973"><path id="x" d="M18.521,6.344l-5.241,5.24L8.04,6.344,6.293,8.091l5.24,5.24-5.24,5.24L8.04,20.317l5.24-5.24,5.241,5.24,1.747-1.747-5.24-5.24,5.24-5.24Z" transform="translate(-6.293 -6.344)" fill="#000"/></svg>
             </button>
@@ -161,9 +215,9 @@
 
             <div>
               <div class="consent-mode__submit">
-                <button class="consent-mode__submit_button">No, gracias</button>
-                <button class="consent-mode__submit_button">Aceptar selección</button>
-                <button class="consent-mode__submit_button">Aceptar todas</button>
+                <button class="consent-mode__submit_button" onclick="allConsentDenied();">No, gracias</button>
+                <button class="consent-mode__submit_button" onclick="selectConsentUpdate();">Aceptar selección</button>
+                <button class="consent-mode__submit_button" onclick="allConsentGranted();">Aceptar todas</button>
               </div>
             </div>
 

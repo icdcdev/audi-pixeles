@@ -115,6 +115,11 @@
         position: fixed;
         right: 15px;
         top: 15px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
 
         button{
             background-color: transparent;
@@ -260,12 +265,12 @@
                         width: 25px;
                     }
 
-                    input[type='checkbox']:checked ~ .switch {
+                    input[type='checkbox']:checked ~ .consent-mode__content_switch {
                         background: #000 !important;
                         transition: .5s;
                     }
 
-                    input[type='checkbox']:checked ~ .toggle {
+                    input[type='checkbox']:checked ~ .consent-mode__content_toggle {
                         left: 25px;
                     }
                 }
