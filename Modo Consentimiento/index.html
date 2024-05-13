@@ -22,7 +22,6 @@
       function displayConsentMode(){
         if(localStorage.getItem('consentModeSettings') !== null){
           let consentSave = JSON.parse(localStorage.getItem('consentModeSettings'));
-
           if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "granted") {
             $("#FunctionalSlideStadistics").prop('checked', true);
             $("#FunctionalSlideMarketing").prop('checked', true);
@@ -35,7 +34,6 @@
             $("#FunctionalSlideMarketing").prop('checked', false);
           }
         }
-
         $(".consent-mode__container").addClass("active");
         $(".consent-mode__close").addClass("active");
       }
@@ -58,7 +56,6 @@
           'ad_storage': 'denied',
           'analytics_storage': 'denied'
         });
-
         closeConsentMode();
       }
       function allConsentGranted() {

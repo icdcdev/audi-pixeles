@@ -1,5 +1,7 @@
-$(document).ready(function(){
-    if(localStorage.getItem('consentModeSettings') === null){
+/**
+ * Añadir en Pixel de Google Analytics para sitio web
+ */
+/*if(localStorage.getItem('consentModeSettings') === null || localStorage.getItem('consentModeSettings') === undefined){
         gtag('consent', 'default', {
             'ad_user_data': 'denied',
             'ad_personalization': 'denied',
@@ -9,7 +11,8 @@ $(document).ready(function(){
     } else {
         gtag('consent', 'default', JSON.parse(localStorage.getItem('consentModeSettings')));
     }
-
+*/
+$(document).ready(function(){
     var consentModePixel = document.createElement("div");
     consentModePixel.className = 'consent-mode';
     consentModePixel.style = 'position: fixed; bottom: 0px; left: 0px; z-index: 199;';
@@ -501,7 +504,6 @@ $(document).ready(function(){
     function displayConsentMode(){
         if(localStorage.getItem('consentModeSettings') !== null){
           let consentSave = JSON.parse(localStorage.getItem('consentModeSettings'));
-
           if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "granted") {
             $("#FunctionalSlideStadistics").prop('checked', true);
             $("#FunctionalSlideMarketing").prop('checked', true);
@@ -514,7 +516,6 @@ $(document).ready(function(){
             $("#FunctionalSlideMarketing").prop('checked', false);
           }
         }
-
         $(".consent-mode__container").addClass("active");
         $(".consent-mode__close").addClass("active");
       }
