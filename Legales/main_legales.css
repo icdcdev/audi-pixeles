@@ -1,0 +1,192 @@
+.legales {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+}
+.legales__icon {
+  width: 84.24px;
+  height: 88.37px;
+  display: none;
+}
+.legales__icon.active {
+  display: block;
+}
+.legales__icon button {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(45deg, #000000 50%, transparent 50%);
+  cursor: pointer;
+  -webkit-transition: width 0.4s 0.1s;
+  transition: width 0.4s 0.1s;
+}
+.legales__icon button:hover {
+  background: linear-gradient(45deg, #333333 50%, transparent 50%);
+}
+.legales__icon button svg {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}
+.legales__info {
+  display: none;
+}
+.legales__info.active {
+  display: block;
+}
+.legales__info--box {
+  background: #000000;
+  color: #ffffff;
+  height: calc(95vh - 72px);
+  width: 80vw;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  z-index: 101;
+  position: relative;
+}
+.legales__info--box::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+@media only screen and (min-width: 768px) {
+  .legales__info--box {
+    width: 530px;
+  }
+}
+.legales__info--box--in {
+  width: auto;
+  height: auto;
+  padding: 25px;
+}
+.legales__info--box--in .legal__close {
+  text-align: end;
+  margin-right: -15px;
+}
+.legales__info--box--in .legal__close button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+.legales__info--box--in .legal__close button:hover svg {
+  opacity: 0.6;
+}
+.legales__info--box--in .legal__close button svg {
+  -webkit-transition: width 0.4s 0.1s;
+  transition: width 0.4s 0.1s;
+}
+.legales__info--box--in .legal_description {
+  margin-top: 30px;
+  margin-bottom: 27px;
+}
+.legales__info--box--in hr {
+  margin-bottom: 30px;
+}
+.legales__info .legal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s, -webkit-transform 0s;
+  transition: opacity 0.4s, -webkit-transform 0s;
+  transition: transform 0s, opacity 0.4s;
+  transition: transform 0s, opacity 0.4s, -webkit-transform 0s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  will-change: transform, opacity;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  opacity: 1;
+}
+
+.legal_button_p {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid rgb(26, 26, 26);
+  border-radius: 0px;
+  outline-offset: 2px;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0.02, 0.5, 1);
+          transition-timing-function: cubic-bezier(0.75, 0.02, 0.5, 1);
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 14px;
+  font-family: AudiType, sans-serif;
+  font-stretch: 105%;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  min-width: 9em;
+  padding-block: 0.9em;
+  padding-inline: 2.5em;
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  -webkit-user-select: initial;
+     -moz-user-select: initial;
+      -ms-user-select: initial;
+          user-select: initial;
+  margin-bottom: 22px;
+}
+.legal_button_p:hover {
+  color: rgb(217, 217, 217);
+  border-color: rgb(217, 217, 217);
+}
+
+.legal-p {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: AudiType, sans-serif;
+  font-stretch: 105%;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+.legal-p.sub {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.legal-title {
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: AudiType, sans-serif;
+  font-stretch: 130%;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+}

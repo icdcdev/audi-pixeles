@@ -169,6 +169,7 @@
   vertical-align: middle;
   font-size: 14px;
   cursor: default;
+  margin-bottom: 18px;
 }
 .consent-mode__content .consent-mode__content_ensToggleRow .consent-mode__content_ens-toggle-row-item .consent-mode__content_card {
   border: 0;
@@ -241,6 +242,9 @@
 .consent-mode__content summary {
   cursor: pointer;
   margin-bottom: 5px;
+}
+.consent-mode__content_details {
+  margin-top: 18px;
 }
 .consent-mode__content_details_c1 {
   margin-bottom: 20px;
