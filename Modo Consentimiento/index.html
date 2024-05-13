@@ -30,6 +30,9 @@
             $("#FunctionalSlideStadistics").prop('checked', true);
           } else if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "denied") {
             $("#FunctionalSlideMarketing").prop('checked', true);
+          } else {
+            $("#FunctionalSlideStadistics").prop('checked', false);
+            $("#FunctionalSlideMarketing").prop('checked', false);
           }
         }
 
@@ -116,7 +119,6 @@
               </p>
             </div>
           </div>
-          
           <div class="consent-mode__content">
             <div class="consent-mode__content_ensToggleRow">
               <div class="consent-mode__content_ens-toggle-row-item">
@@ -140,7 +142,6 @@
                       <p>
                         Analytics_storage
                       </p>
-
                       <details  class="consent-mode__content_details_d2">
                         <summary  class="consent-mode__content_details_s2">
                           Detalles
@@ -154,9 +155,7 @@
                 </details>
               </div>
             </div>
-
             <hr/>
-            
             <div class="consent-mode__content_ensToggleRow">
               <div class="consent-mode__content_ens-toggle-row-item">
                 <span class="consent-mode__content_ensToggleLabel">Marketing cookies</span>
@@ -174,13 +173,11 @@
                   <summary class="consent-mode__content_details_s1">
                     Detalles
                   </summary>
-                  
                   <div class="consent-mode__content_details_submenu">
                     <div class="consent-mode__content_details_c1">
                       <p>
                         ad_personalization
                       </p>
-
                       <details  class="consent-mode__content_details_d2">
                         <summary  class="consent-mode__content_details_s2">
                           Detalles
@@ -190,12 +187,10 @@
                         </p>
                       </details>
                     </div>
-
                     <div class="consent-mode__content_details_c1">
                       <p>
                         ad_storage
                       </p>
-
                       <details  class="consent-mode__content_details_d2">
                         <summary  class="consent-mode__content_details_s2">
                           Detalles
@@ -205,12 +200,10 @@
                         </p>
                       </details>
                     </div>
-
                     <div class="consent-mode__content_details_c1">
                       <p>
                         ad_user_data
                       </p>
-
                       <details  class="consent-mode__content_details_d2">
                         <summary  class="consent-mode__content_details_s2">
                           Detalles
@@ -224,9 +217,7 @@
                 </details>
               </div>
             </div>
-
             <hr/>
-
             <div>
               <div class="consent-mode__submit">
                 <button class="consent-mode__submit_button" onclick="allConsentDenied();">No, gracias</button>
@@ -234,9 +225,7 @@
                 <button class="consent-mode__submit_button" onclick="allConsentGranted();">Aceptar todas</button>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /*if(localStorage.getItem('consentModeSettings') === null){
+    if(localStorage.getItem('consentModeSettings') === null){
         gtag('consent', 'default', {
             'ad_user_data': 'denied',
             'ad_personalization': 'denied',
@@ -8,7 +8,7 @@ $(document).ready(function(){
         });
     } else {
         gtag('consent', 'default', JSON.parse(localStorage.getItem('consentModeSettings')));
-    }*/
+    }
 
     var consentModePixel = document.createElement("div");
     consentModePixel.className = 'consent-mode';
@@ -364,149 +364,135 @@ $(document).ready(function(){
     }
 </style>
 <div class="consent-mode__container active">
-    <div class="consent-mode__overlay" onclick="closeConsentModeOverlay();"></div>
-    <div class="consent-mode__modal">
-        <div class="consent-mode__close">
-        <button onclick="closeConsentMode();">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13.975" height="13.973" viewBox="0 0 13.975 13.973"><path id="x" d="M18.521,6.344l-5.241,5.24L8.04,6.344,6.293,8.091l5.24,5.24-5.24,5.24L8.04,20.317l5.24-5.24,5.241,5.24,1.747-1.747-5.24-5.24,5.24-5.24Z" transform="translate(-6.293 -6.344)" fill="#000"/></svg>
-        </button>
-        </div>
-        <div class="consent-mode__title">
-        <div class="consent-mode__title_logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="69" height="24" viewBox="0 0 65.172 22.845"><defs><style>.cls-consent {fill: #000000;}</style></defs><g id="cf1fb765e00684515d1fc1d6487baae4" transform="translate(0 -11.548)"><path id="Trazado_1125" class="cls-consent" d="M28.393,159.644c4.735-3.219,9.437-3.225,14.152-.02,4.7-3.205,9.4-3.2,14.158.02a11.272,11.272,0,0,1,9.091-2.2,10.976,10.976,0,0,1,6.9,4.17A11.406,11.406,0,0,1,56.7,177.64c-4.722,3.219-9.423,3.239-14.158.027-4.688,3.205-9.4,3.212-14.145-.02a11.413,11.413,0,1,1,0-18Zm30.172,16.067a8.759,8.759,0,1,0,.007-14.125,11.5,11.5,0,0,1-.007,14.125ZM26.524,161.586a8.756,8.756,0,1,0,.007,14.118,11.444,11.444,0,0,1-2.427-7.043A11.3,11.3,0,0,1,26.524,161.586Zm3.8.007a11.466,11.466,0,0,1-.007,14.118,8.658,8.658,0,0,0,10.315-.02,11.343,11.343,0,0,1-2.434-7.043,11.219,11.219,0,0,1,2.441-7.063A8.657,8.657,0,0,0,30.328,161.592ZM44.44,175.7a8.66,8.66,0,0,0,10.281.033c-3.219-4.728-3.232-9.443,0-14.178a8.648,8.648,0,0,0-10.275.04A11.422,11.422,0,0,1,44.44,175.7Zm-1.9-1.9a8.555,8.555,0,0,0,0-10.275A8.616,8.616,0,0,0,42.538,173.8Zm14.112-10.3a8.657,8.657,0,0,0,.013,10.295A8.6,8.6,0,0,0,56.65,163.494ZM28.433,173.809a8.65,8.65,0,0,0-.007-10.308A8.628,8.628,0,0,0,28.433,173.809Z" transform="translate(-9.963 -145.677)"></path></g></svg>
-        </div>
-        <div class="consent-mode__title_span">
-            <span><b>Configuración para compartir datos y cookies</b></span>
-        </div>
-        <div class="consent-mode__title_description">
-            <p>
-                Volkswagen de México S.A. de C.V., marca Audi y nuestros socios, usamos cookies y tecnologías similares, tanto propias como de terceros, para ayudarte a tener una mejor experiencia en nuestro sitio web y analizar el tráfico. Esto también nos permite ofrecerte contenido adaptado a tus intereses, incluyendo publicidad personalizada. Al usar nuestro sitio, se pueden establecer conexiones entre tu navegador y servidores de terceros, y tus datos personales pueden ser transmitidos. Tu consentimiento es importante para nosotros, necesitamos tu permiso para usar estas cookies. Puedes dar tu consentimiento al hacer clic en ‘Aceptar todo’ o si prefieres, puedes configurar tus preferencias individualmente por cada tipo de cookie y guardar tu configuración. En caso de no realizar ninguna selección, solo utilizaremos las cookies necesarias. No estás legalmente obligado a dar tu consentimiento, pero si decides no hacerlo, algunos de nuestros servicios podrían no estar disponibles. Puedes gestionar tus preferencias de cookies en cualquier momento y revocar tu consentimiento con efecto inmediato. Encuentra más detalles en nuestra política de cookies y aviso de privacidad.
-            </p>
-        </div>
-        </div>
-        
-        <div class="consent-mode__content">
-        <div class="consent-mode__content_ensToggleRow">
-            <div class="consent-mode__content_ens-toggle-row-item">
-            <span class="consent-mode__content_ensToggleLabel">Estadística cookies</span>
-            <label class="consent-mode__content_card" for="FunctionalSlideStadistics">
-                <input class="consent-mode__content_ensCheckbox" id="FunctionalSlideStadistics" type="checkbox" name="FunctionalSlideStadistics">
-                <span class="consent-mode__content_switch"></span>
-                <span class="consent-mode__content_toggle"></span>
-            </label>
-            </div>
-            <p>
-            Las cookies de estadísticas permiten a los administradores de páginas web comprender mejor la interacción de los visitantes al recopilar información de manera anónima.
-            </p>
-            <div class="consent-mode__content_details">
-            <details class="consent-mode__content_details_d1">
-                <summary class="consent-mode__content_details_s1">
-                Detalles
-                </summary>
-                <div class="consent-mode__content_details_submenu">
-                <div class="consent-mode__content_details_c1">
-                    <p>
-                    Analytics_storage
-                    </p>
-
-                    <details  class="consent-mode__content_details_d2">
-                    <summary  class="consent-mode__content_details_s2">
-                        Detalles
-                    </summary>
-                    <p>
-                        Habilita el almacenamiento de información para analíticas, como la duración de las visitas (mediante cookies).
-                    </p>
-                    </details>
-                </div>
-                </div>
-            </details>
-            </div>
-        </div>
-
-        <hr/>
-        
-        <div class="consent-mode__content_ensToggleRow">
-            <div class="consent-mode__content_ens-toggle-row-item">
-            <span class="consent-mode__content_ensToggleLabel">Marketing cookies</span>
-            <label class="consent-mode__content_card" for="FunctionalSlideMarketing">
-                <input class="consent-mode__content_ensCheckbox" id="FunctionalSlideMarketing" type="checkbox" name="FunctionalSlideMarketing">
-                <span class="consent-mode__content_switch"></span>
-                <span class="consent-mode__content_toggle"></span>
-            </label>
-            </div>
-            <p>
-            Las cookies de marketing se utilizan para mostrar anuncios relevantes y atractivos a los usuarios, siendo valiosas tanto para editores como para anunciantes.
-            </p>
-            <div class="consent-mode__content_details">
-            <details class="consent-mode__content_details_d1">
-                <summary class="consent-mode__content_details_s1">
-                Detalles
-                </summary>
-                
-                <div class="consent-mode__content_details_submenu">
-                <div class="consent-mode__content_details_c1">
-                    <p>
-                    ad_personalization
-                    </p>
-
-                    <details  class="consent-mode__content_details_d2">
-                    <summary  class="consent-mode__content_details_s2">
-                        Detalles
-                    </summary>
-                    <p>
-                        Define el consentimiento sobre la publicidad personalizada.
-                    </p>
-                    </details>
-                </div>
-
-                <div class="consent-mode__content_details_c1">
-                    <p>
-                    ad_storage
-                    </p>
-
-                    <details  class="consent-mode__content_details_d2">
-                    <summary  class="consent-mode__content_details_s2">
-                        Detalles
-                    </summary>
-                    <p>
-                        Habilita el almacenamiento de información para fines publicitarios (mediante cookies).
-                    </p>
-                    </details>
-                </div>
-
-                <div class="consent-mode__content_details_c1">
-                    <p>
-                    ad_user_data
-                    </p>
-
-                    <details  class="consent-mode__content_details_d2">
-                    <summary  class="consent-mode__content_details_s2">
-                        Detalles
-                    </summary>
-                    <p>
-                        Define el consentimiento sobre el envío a Google de datos de usuario relacionados con la publicidad.
-                    </p>
-                    </details>
-                </div>
-                </div>
-            </details>
-            </div>
-        </div>
-
-        <hr/>
-
-        <div>
-            <div class="consent-mode__submit">
-            <button class="consent-mode__submit_button" onclick="allConsentDenied();">No, gracias</button>
-            <button class="consent-mode__submit_button" onclick="selectConsentUpdate();">Aceptar selección</button>
-            <button class="consent-mode__submit_button" onclick="allConsentGranted();">Aceptar todas</button>
-            </div>
-        </div>
-
-        </div>
-
+<div class="consent-mode__overlay" onclick="closeConsentModeOverlay();"></div>
+<div class="consent-mode__modal">
+  <div class="consent-mode__close">
+    <button onclick="closeConsentMode();">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13.975" height="13.973" viewBox="0 0 13.975 13.973"><path id="x" d="M18.521,6.344l-5.241,5.24L8.04,6.344,6.293,8.091l5.24,5.24-5.24,5.24L8.04,20.317l5.24-5.24,5.241,5.24,1.747-1.747-5.24-5.24,5.24-5.24Z" transform="translate(-6.293 -6.344)" fill="#000"/></svg>
+    </button>
+  </div>
+  <div class="consent-mode__title">
+    <div class="consent-mode__title_logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="69" height="24" viewBox="0 0 65.172 22.845"><defs><style>.cls-consent {fill: #000000;}</style></defs><g id="cf1fb765e00684515d1fc1d6487baae4" transform="translate(0 -11.548)"><path id="Trazado_1125" class="cls-consent" d="M28.393,159.644c4.735-3.219,9.437-3.225,14.152-.02,4.7-3.205,9.4-3.2,14.158.02a11.272,11.272,0,0,1,9.091-2.2,10.976,10.976,0,0,1,6.9,4.17A11.406,11.406,0,0,1,56.7,177.64c-4.722,3.219-9.423,3.239-14.158.027-4.688,3.205-9.4,3.212-14.145-.02a11.413,11.413,0,1,1,0-18Zm30.172,16.067a8.759,8.759,0,1,0,.007-14.125,11.5,11.5,0,0,1-.007,14.125ZM26.524,161.586a8.756,8.756,0,1,0,.007,14.118,11.444,11.444,0,0,1-2.427-7.043A11.3,11.3,0,0,1,26.524,161.586Zm3.8.007a11.466,11.466,0,0,1-.007,14.118,8.658,8.658,0,0,0,10.315-.02,11.343,11.343,0,0,1-2.434-7.043,11.219,11.219,0,0,1,2.441-7.063A8.657,8.657,0,0,0,30.328,161.592ZM44.44,175.7a8.66,8.66,0,0,0,10.281.033c-3.219-4.728-3.232-9.443,0-14.178a8.648,8.648,0,0,0-10.275.04A11.422,11.422,0,0,1,44.44,175.7Zm-1.9-1.9a8.555,8.555,0,0,0,0-10.275A8.616,8.616,0,0,0,42.538,173.8Zm14.112-10.3a8.657,8.657,0,0,0,.013,10.295A8.6,8.6,0,0,0,56.65,163.494ZM28.433,173.809a8.65,8.65,0,0,0-.007-10.308A8.628,8.628,0,0,0,28.433,173.809Z" transform="translate(-9.963 -145.677)"></path></g></svg>
     </div>
-    </div>`.replace('consent-mode__container active', localStorage.getItem('consentModeSettings') === null ? 'consent-mode__container active' : 'consent-mode__container');
+    <div class="consent-mode__title_span">
+      <span><b>Configuración para compartir datos y cookies</b></span>
+    </div>
+    <div class="consent-mode__title_description">
+      <p>
+        Volkswagen de México S.A. de C.V., marca Audi y nuestros socios, usamos cookies y tecnologías similares, tanto propias como de terceros, para ayudarte a tener una mejor experiencia en nuestro sitio web y analizar el tráfico. Esto también nos permite ofrecerte contenido adaptado a tus intereses, incluyendo publicidad personalizada. Al usar nuestro sitio, se pueden establecer conexiones entre tu navegador y servidores de terceros, y tus datos personales pueden ser transmitidos. Tu consentimiento es importante para nosotros, necesitamos tu permiso para usar estas cookies. Puedes dar tu consentimiento al hacer clic en ‘Aceptar todo’ o si prefieres, puedes configurar tus preferencias individualmente por cada tipo de cookie y guardar tu configuración. En caso de no realizar ninguna selección, solo utilizaremos las cookies necesarias. No estás legalmente obligado a dar tu consentimiento, pero si decides no hacerlo, algunos de nuestros servicios podrían no estar disponibles. Puedes gestionar tus preferencias de cookies en cualquier momento y revocar tu consentimiento con efecto inmediato. Encuentra más detalles en nuestra política de cookies y aviso de privacidad.
+      </p>
+    </div>
+  </div>
+  <div class="consent-mode__content">
+    <div class="consent-mode__content_ensToggleRow">
+      <div class="consent-mode__content_ens-toggle-row-item">
+        <span class="consent-mode__content_ensToggleLabel">Estadística cookies</span>
+        <label class="consent-mode__content_card" for="FunctionalSlideStadistics">
+          <input class="consent-mode__content_ensCheckbox" id="FunctionalSlideStadistics" type="checkbox" name="FunctionalSlideStadistics">
+          <span class="consent-mode__content_switch"></span>
+          <span class="consent-mode__content_toggle"></span>
+        </label>
+      </div>
+      <p>
+        Las cookies de estadísticas permiten a los administradores de páginas web comprender mejor la interacción de los visitantes al recopilar información de manera anónima.
+      </p>
+      <div class="consent-mode__content_details">
+        <details class="consent-mode__content_details_d1">
+          <summary class="consent-mode__content_details_s1">
+            Detalles
+          </summary>
+          <div class="consent-mode__content_details_submenu">
+            <div class="consent-mode__content_details_c1">
+              <p>
+                Analytics_storage
+              </p>
+              <details  class="consent-mode__content_details_d2">
+                <summary  class="consent-mode__content_details_s2">
+                  Detalles
+                </summary>
+                <p>
+                  Habilita el almacenamiento de información para analíticas, como la duración de las visitas (mediante cookies).
+                </p>
+              </details>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+    <hr/>
+    <div class="consent-mode__content_ensToggleRow">
+      <div class="consent-mode__content_ens-toggle-row-item">
+        <span class="consent-mode__content_ensToggleLabel">Marketing cookies</span>
+        <label class="consent-mode__content_card" for="FunctionalSlideMarketing">
+          <input class="consent-mode__content_ensCheckbox" id="FunctionalSlideMarketing" type="checkbox" name="FunctionalSlideMarketing">
+          <span class="consent-mode__content_switch"></span>
+          <span class="consent-mode__content_toggle"></span>
+        </label>
+      </div>
+      <p>
+        Las cookies de marketing se utilizan para mostrar anuncios relevantes y atractivos a los usuarios, siendo valiosas tanto para editores como para anunciantes.
+      </p>
+      <div class="consent-mode__content_details">
+        <details class="consent-mode__content_details_d1">
+          <summary class="consent-mode__content_details_s1">
+            Detalles
+          </summary>
+          <div class="consent-mode__content_details_submenu">
+            <div class="consent-mode__content_details_c1">
+              <p>
+                ad_personalization
+              </p>
+              <details  class="consent-mode__content_details_d2">
+                <summary  class="consent-mode__content_details_s2">
+                  Detalles
+                </summary>
+                <p>
+                  Define el consentimiento sobre la publicidad personalizada.
+                </p>
+              </details>
+            </div>
+            <div class="consent-mode__content_details_c1">
+              <p>
+                ad_storage
+              </p>
+              <details  class="consent-mode__content_details_d2">
+                <summary  class="consent-mode__content_details_s2">
+                  Detalles
+                </summary>
+                <p>
+                  Habilita el almacenamiento de información para fines publicitarios (mediante cookies).
+                </p>
+              </details>
+            </div>
+            <div class="consent-mode__content_details_c1">
+              <p>
+                ad_user_data
+              </p>
+              <details  class="consent-mode__content_details_d2">
+                <summary  class="consent-mode__content_details_s2">
+                  Detalles
+                </summary>
+                <p>
+                  Define el consentimiento sobre el envío a Google de datos de usuario relacionados con la publicidad.
+                </p>
+              </details>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+    <hr/>
+    <div>
+      <div class="consent-mode__submit">
+        <button class="consent-mode__submit_button" onclick="allConsentDenied();">No, gracias</button>
+        <button class="consent-mode__submit_button" onclick="selectConsentUpdate();">Aceptar selección</button>
+        <button class="consent-mode__submit_button" onclick="allConsentGranted();">Aceptar todas</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>`.replace('consent-mode__container active', localStorage.getItem('consentModeSettings') === null ? 'consent-mode__container active' : 'consent-mode__container');
 
     $("body").append(consentModePixel);
 
@@ -514,78 +500,81 @@ $(document).ready(function(){
     <script>
     function displayConsentMode(){
         if(localStorage.getItem('consentModeSettings') !== null){
-            let consentSave = JSON.parse(localStorage.getItem('consentModeSettings'));
+          let consentSave = JSON.parse(localStorage.getItem('consentModeSettings'));
 
-            if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "granted") {
-                $("#FunctionalSlideStadistics").prop('checked', true);
-                $("#FunctionalSlideMarketing").prop('checked', true);
-            } else if (consentSave.ad_user_data === "denied" && consentSave.ad_personalization === "denied" && consentSave.ad_storage === "denied" && consentSave.analytics_storage === "granted") {
-                $("#FunctionalSlideStadistics").prop('checked', true);
-            } else if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "denied") {
-                $("#FunctionalSlideMarketing").prop('checked', true);
-            }
-            }
+          if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "granted") {
+            $("#FunctionalSlideStadistics").prop('checked', true);
+            $("#FunctionalSlideMarketing").prop('checked', true);
+          } else if (consentSave.ad_user_data === "denied" && consentSave.ad_personalization === "denied" && consentSave.ad_storage === "denied" && consentSave.analytics_storage === "granted") {
+            $("#FunctionalSlideStadistics").prop('checked', true);
+          } else if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "denied") {
+            $("#FunctionalSlideMarketing").prop('checked', true);
+          } else {
+            $("#FunctionalSlideStadistics").prop('checked', false);
+            $("#FunctionalSlideMarketing").prop('checked', false);
+          }
+        }
 
-            $(".consent-mode__container").addClass("active");
-            $(".consent-mode__close").addClass("active");
+        $(".consent-mode__container").addClass("active");
+        $(".consent-mode__close").addClass("active");
+      }
+      function closeConsentMode(){
+        $(".consent-mode__container").removeClass("active");
+      }
+      function closeConsentModeOverlay(){
+        if(localStorage.getItem('consentModeSettings') !== null){
+          $(".consent-mode__container").removeClass("active");
         }
-        function closeConsentMode(){
-            $(".consent-mode__container").removeClass("active");
-        }
-        function closeConsentModeOverlay(){
-            if(localStorage.getItem('consentModeSettings') !== null){
-            $(".consent-mode__container").removeClass("active");
-            }
-        }
-        function setConsentSettings(consent) {
-            gtag('consent', 'update', consent);
-            localStorage.setItem('consentModeSettings' , JSON.stringify(consent));
-        }
-        function allConsentDenied() {
-            setConsentSettings({
+      }
+      function setConsentSettings(consent) {
+        gtag('consent', 'update', consent);
+        localStorage.setItem('consentModeSettings' , JSON.stringify(consent));
+      }
+      function allConsentDenied() {
+        setConsentSettings({
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied'
+        });
+
+        closeConsentMode();
+      }
+      function allConsentGranted() {
+        setConsentSettings({
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted'
+        });
+
+        closeConsentMode();
+      }
+      function selectConsentUpdate() {
+        let stadisticsCheck = $('#FunctionalSlideStadistics').is(":checked");
+        let marketingCheck = $('#FunctionalSlideMarketing').is(":checked");
+
+        if ( stadisticsCheck && marketingCheck ) {
+          allConsentGranted();
+        } else if ( stadisticsCheck && !marketingCheck ) {
+          setConsentSettings({
             'ad_user_data': 'denied',
             'ad_personalization': 'denied',
             'ad_storage': 'denied',
-            'analytics_storage': 'denied'
-            });
-
-            closeConsentMode();
-        }
-        function allConsentGranted() {
-            setConsentSettings({
+            'analytics_storage': 'granted'
+          });
+        } else if ( !stadisticsCheck && marketingCheck ) {
+          setConsentSettings({
             'ad_user_data': 'granted',
             'ad_personalization': 'granted',
             'ad_storage': 'granted',
-            'analytics_storage': 'granted'
-            });
-
-            closeConsentMode();
+            'analytics_storage': 'denied'
+          });
+        } else {
+          allConsentDenied();
         }
-        function selectConsentUpdate() {
-            let stadisticsCheck = $('#FunctionalSlideStadistics').is(":checked");
-            let marketingCheck = $('#FunctionalSlideMarketing').is(":checked");
-
-            if ( stadisticsCheck && marketingCheck ) {
-            allConsentGranted();
-            } else if ( stadisticsCheck && !marketingCheck ) {
-            setConsentSettings({
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'ad_storage': 'denied',
-                'analytics_storage': 'granted'
-            });
-            } else if ( !stadisticsCheck && marketingCheck ) {
-            setConsentSettings({
-                'ad_user_data': 'granted',
-                'ad_personalization': 'granted',
-                'ad_storage': 'granted',
-                'analytics_storage': 'denied'
-            });
-            } else {
-            allConsentDenied();
-            }
-            closeConsentMode();
-        }
+        closeConsentMode();
+      }
     <\/script>
     `),
     s_ConsentMode = document.createElement("script"),
