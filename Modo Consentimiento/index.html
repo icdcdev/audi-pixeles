@@ -20,6 +20,19 @@
   <body>
     <script>
       function displayConsentMode(){
+        if(localStorage.getItem('consentModeSettings') !== null){
+          let consentSave = JSON.parse(localStorage.getItem('consentModeSettings'));
+
+          if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "granted") {
+            $("#FunctionalSlideStadistics").prop('checked', true);
+            $("#FunctionalSlideMarketing").prop('checked', true);
+          } else if (consentSave.ad_user_data === "denied" && consentSave.ad_personalization === "denied" && consentSave.ad_storage === "denied" && consentSave.analytics_storage === "granted") {
+            $("#FunctionalSlideStadistics").prop('checked', true);
+          } else if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "denied") {
+            $("#FunctionalSlideMarketing").prop('checked', true);
+          }
+        }
+
         $(".consent-mode__container").addClass("active");
         $(".consent-mode__close").addClass("active");
       }

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    if(localStorage.getItem('consentModeSettings') === null){
+    /*if(localStorage.getItem('consentModeSettings') === null){
         gtag('consent', 'default', {
             'ad_user_data': 'denied',
             'ad_personalization': 'denied',
@@ -8,7 +8,7 @@ $(document).ready(function(){
         });
     } else {
         gtag('consent', 'default', JSON.parse(localStorage.getItem('consentModeSettings')));
-    }
+    }*/
 
     var consentModePixel = document.createElement("div");
     consentModePixel.className = 'consent-mode';
@@ -512,7 +512,80 @@ $(document).ready(function(){
 
     const exampleScriptConsentMode = getScriptConsentModeContent(`
     <script>
-    function displayConsentMode(){$(".consent-mode__container").addClass("active"),$(".consent-mode__close").addClass("active")}function closeConsentMode(){$(".consent-mode__container").removeClass("active")}function closeConsentModeOverlay(){null!==localStorage.getItem("consentModeSettings")&&$(".consent-mode__container").removeClass("active")}function setConsentSettings(e){gtag("consent","update",e),localStorage.setItem("consentModeSettings",JSON.stringify(e))}function allConsentDenied(){setConsentSettings({ad_user_data:"denied",ad_personalization:"denied",ad_storage:"denied",analytics_storage:"denied"}),closeConsentMode()}function allConsentGranted(){setConsentSettings({ad_user_data:"granted",ad_personalization:"granted",ad_storage:"granted",analytics_storage:"granted"}),closeConsentMode()}function selectConsentUpdate(){let e=$("#FunctionalSlideStadistics").is(":checked"),n=$("#FunctionalSlideMarketing").is(":checked");e&&n?allConsentGranted():e&&!n?setConsentSettings({ad_user_data:"denied",ad_personalization:"denied",ad_storage:"denied",analytics_storage:"granted"}):!e&&n?setConsentSettings({ad_user_data:"granted",ad_personalization:"granted",ad_storage:"granted",analytics_storage:"denied"}):allConsentDenied(),closeConsentMode()}
+    function displayConsentMode(){
+        if(localStorage.getItem('consentModeSettings') !== null){
+            let consentSave = JSON.parse(localStorage.getItem('consentModeSettings'));
+
+            if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "granted") {
+                $("#FunctionalSlideStadistics").prop('checked', true);
+                $("#FunctionalSlideMarketing").prop('checked', true);
+            } else if (consentSave.ad_user_data === "denied" && consentSave.ad_personalization === "denied" && consentSave.ad_storage === "denied" && consentSave.analytics_storage === "granted") {
+                $("#FunctionalSlideStadistics").prop('checked', true);
+            } else if (consentSave.ad_user_data === "granted" && consentSave.ad_personalization === "granted" && consentSave.ad_storage === "granted" && consentSave.analytics_storage === "denied") {
+                $("#FunctionalSlideMarketing").prop('checked', true);
+            }
+            }
+
+            $(".consent-mode__container").addClass("active");
+            $(".consent-mode__close").addClass("active");
+        }
+        function closeConsentMode(){
+            $(".consent-mode__container").removeClass("active");
+        }
+        function closeConsentModeOverlay(){
+            if(localStorage.getItem('consentModeSettings') !== null){
+            $(".consent-mode__container").removeClass("active");
+            }
+        }
+        function setConsentSettings(consent) {
+            gtag('consent', 'update', consent);
+            localStorage.setItem('consentModeSettings' , JSON.stringify(consent));
+        }
+        function allConsentDenied() {
+            setConsentSettings({
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied'
+            });
+
+            closeConsentMode();
+        }
+        function allConsentGranted() {
+            setConsentSettings({
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+            });
+
+            closeConsentMode();
+        }
+        function selectConsentUpdate() {
+            let stadisticsCheck = $('#FunctionalSlideStadistics').is(":checked");
+            let marketingCheck = $('#FunctionalSlideMarketing').is(":checked");
+
+            if ( stadisticsCheck && marketingCheck ) {
+            allConsentGranted();
+            } else if ( stadisticsCheck && !marketingCheck ) {
+            setConsentSettings({
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'ad_storage': 'denied',
+                'analytics_storage': 'granted'
+            });
+            } else if ( !stadisticsCheck && marketingCheck ) {
+            setConsentSettings({
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'ad_storage': 'granted',
+                'analytics_storage': 'denied'
+            });
+            } else {
+            allConsentDenied();
+            }
+            closeConsentMode();
+        }
     <\/script>
     `),
     s_ConsentMode = document.createElement("script"),
