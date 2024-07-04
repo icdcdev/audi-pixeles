@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var legalesPixel = document.createElement("div");
     legalesPixel.className = 'legales';
-    legalesPixel.style = 'position: fixed;bottom: 0px;left: 0px;z-index: 99;';
+    legalesPixel.style = 'position: fixed;bottom: 0px;left: 0px;z-index: 100;';
     
     legalesPixel.innerHTML = `
     <style type="text/css">
